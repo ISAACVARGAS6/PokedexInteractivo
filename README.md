@@ -1,6 +1,7 @@
 # Pokédex Next.js
 
 Una aplicación Pokédex moderna construida con **Next.js 15**, **TypeScript**, **Tailwind CSS** y **Axios** que consume la API de Pokémon para crear una experiencia interactiva y responsive.
+<img width="1309" height="647" alt="imagen" src="https://github.com/user-attachments/assets/1fd55013-24fb-40c0-b52d-233460cac5e8" />
 
 ## 🚀 Características
 
