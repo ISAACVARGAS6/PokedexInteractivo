@@ -27,8 +27,8 @@ Una aplicación Pokédex moderna construida con **Next.js 15**, **TypeScript**, 
 
 1. **Clona el repositorio:**
 ```bash
-git clone <tu-repositorio>
-cd pokedex-nextjs
+git clone https://github.com/ISAACVARGAS6/PokedexInteractivo.git 
+cd PokedexInteractivo
 ```
 
 2. **Instala las dependencias:**
