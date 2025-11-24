@@ -173,7 +173,7 @@ MIT License - Libre para uso personal y comercial.
 
 ## 👨‍💻 Autor
 
-Desarrollado por **Isaac** como proyecto de aprendizaje con Next.js y TypeScript.
+Desarrollado por **Isaac Vargas** como proyecto de aprendizaje con Next.js y TypeScript.
 
 ---
 
