@@ -1,130 +1,140 @@
-# Pokédex Next.js
+# Pokédex Interactivo
 
-Una aplicación Pokédex moderna construida con **Next.js 15**, **TypeScript**, **Tailwind CSS** y **Axios** que consume la API de Pokémon para crear una experiencia interactiva y responsive.
-<img width="1309" height="647" alt="imagen" src="https://github.com/user-attachments/assets/1fd55013-24fb-40c0-b52d-233460cac5e8" />
+Una aplicación web moderna y elegante para explorar el mundo de los Pokémon, construida con Next.js, React y Tailwind CSS.
 
-## 🚀 Características
-
-- ⚡ **Next.js 15** con App Router
-- 🔍 **Búsqueda en tiempo real** de Pokémon
-- 📱 **Diseño completamente responsive**
-- 🎨 **Interfaz moderna** con Tailwind CSS
-- 🔄 **Paginación** para navegar entre Pokémon
-- 📊 **Modal detallado** con estadísticas completas
-- 🎯 **TypeScript** para type safety
-- ⚡ **Axios** para consumo de API
-- 🎭 **Animaciones suaves** y transiciones
-
-## 🛠️ Tecnologías Utilizadas
-
-- **Next.js 15** - Framework React con App Router
-- **TypeScript** - Tipado estático
-- **Tailwind CSS** - Framework de CSS utility-first
-- **Axios** - Cliente HTTP para consumir APIs
-- **React Hooks** - Estado y efectos
-- **PokéAPI** - API gratuita de Pokémon
-
-## 📦 Instalación
-
-1. **Clona el repositorio:**
-```bash
-git clone https://github.com/ISAACVARGAS6/PokedexInteractivo.git 
-cd PokedexInteractivo
-```
-
-2. **Instala las dependencias:**
-```bash
-npm install
-```
-
-3. **Ejecuta el servidor de desarrollo:**
-```bash
-npm run dev
-```
-
-4. **Abre tu navegador en:** `http://localhost:3000`
-
-## 🎮 Funcionalidades
+## Características
 
 ### 🔍 Búsqueda Inteligente
-- Búsqueda en tiempo real con debounce
-- Autocompletado con imágenes
-- Resultados instantáneos
+- Búsqueda en tiempo real por nombre de Pokémon
+- Navegación con teclado (↑ ↓ Enter)
+- Sugerencias con imágenes y tipos de Pokémon
+- Autocompletado con debounce de 300ms
 
-### 📄 Paginación
-- Navegación entre páginas
-- 20 Pokémon por página
-- Controles intuitivos
+### 🎨 Filtros Avanzados
+- **Filtrado por tipo**: 18 tipos de Pokémon disponibles
+- **Ordenamiento**:
+  - Por número de Pokédex
+  - Por nombre (A-Z / Z-A)
+  - Por peso
+  - Por altura
+- Dirección ascendente/descendente
 
-### 📊 Información Detallada
-- Modal con estadísticas completas
-- Tipos con colores distintivos
-- Barras de progreso para stats
-- Información básica (altura, peso, habilidades)
+### 🎴 Tarjetas de Pokémon
+- Gradientes de colores según el tipo primario
+- Animaciones suaves al hover
+- Información rápida: altura, peso
+- Indicadores de tipo visuales
 
-### 🎨 Diseño Moderno
-- Gradientes atractivos
-- Efectos glassmorphism
-- Animaciones suaves
-- Diseño responsive
+### 📋 Modal Detallado
+- Información completa del Pokémon
+- Barras de estadísticas con colores animados
+- Estadísticas totales
+- Altura, peso y habilidades
 
-## 📁 Estructura del Proyecto
+### 📱 Diseño Responsivo
+- Grid adaptativo: 1-5 columnas según pantalla
+- Optimizado para móvil, tablet y desktop
+- Animaciones fluidas
+
+## Tecnologías
+
+- **Framework**: Next.js 15.5.5
+- **UI**: React 18
+- **Estilos**: Tailwind CSS 3.4
+- **HTTP Client**: Axios
+- **Lenguaje**: TypeScript
+
+## Estructura del Proyecto
 
 ```
 src/
 ├── app/
-│   ├── globals.css          # Estilos globales
-│   ├── layout.tsx           # Layout principal
-│   └── page.tsx             # Página principal
+│   ├── page.tsx          # Página principal
+│   ├── layout.tsx        # Layout de la aplicación
+│   └── globals.css       # Estilos globales
 ├── components/
-│   ├── PokemonCard.tsx      # Tarjeta de Pokémon
-│   ├── PokemonModal.tsx     # Modal de detalles
-│   └── SearchBar.tsx        # Barra de búsqueda
+│   ├── PokemonCard.tsx   # Tarjeta de Pokémon
+│   ├── PokemonModal.tsx  # Modal con detalles
+│   ├── SearchBar.tsx     # Barra de búsqueda
+│   └── FilterBar.tsx     # Filtros y ordenamiento
 ├── hooks/
-│   └── usePokemon.ts        # Hooks personalizados
+│   ├── usePokemon.ts     # Hook para lista y búsqueda
+│   └── usePokemonFilters.ts # Hook para filtrado
 ├── lib/
-│   └── pokemonApi.ts        # Cliente API
+│   └── pokemonApi.ts     # Cliente de PokeAPI
 └── types/
-    └── pokemon.ts           # Tipos TypeScript
+    └── pokemon.ts        # Tipos TypeScript
 ```
 
-## 🔧 Scripts Disponibles
+## API
 
+Este proyecto utiliza la [PokeAPI](https://pokeapi.co/) para obtener datos de Pokémon.
+
+### Endpoints utilizados
+- `GET /pokemon` - Lista paginada de Pokémon
+- `GET /pokemon/{id}` - Detalles de un Pokémon específico
+
+## Instalación
+
+1. **Clonar el repositorio**
 ```bash
-# Desarrollo
-npm run dev
-
-# Construcción para producción
-npm run build
-
-# Iniciar servidor de producción
-npm run start
-
-# Linting
-npm run lint
+git clone <repository-url>
+cd PokedexInteractivo
 ```
 
-## 🌐 API Utilizada
+2. **Instalar dependencias**
+```bash
+npm install
+```
 
-Esta aplicación utiliza la [PokéAPI](https://pokeapi.co/api/v2/pokemon), una API REST gratuita que proporciona información detallada sobre Pokémon.
+3. **Iniciar el servidor de desarrollo**
+```bash
+npm run dev
+```
 
-### Endpoints utilizados:
-- `GET /api/v2/pokemon` - Lista paginada de Pokémon
-- `GET /api/v2/pokemon/{id}` - Detalles específicos de un Pokémon
+4. **Abrir en el navegador**
+Visita [http://localhost:3000](http://localhost:3000)
 
-## 🎨 Personalización
+## Scripts Disponibles
 
-### Colores de Tipos
-Los colores de los tipos de Pokémon están definidos en los componentes y pueden ser personalizados fácilmente.
+| Script | Descripción |
+|--------|-------------|
+| `npm run dev` | Inicia el servidor de desarrollo |
+| `npm run build` | Construye la aplicación para producción |
+| `npm run start` | Inicia el servidor de producción |
+| `npm run lint` | Ejecuta el linter de código |
 
-### Estilos
-Utiliza Tailwind CSS para estilos. Puedes modificar los colores, espaciados y efectos en los archivos de componentes.
+## Tipos de Pokémon
 
-### Configuración
-- **Pokémon por página**: Modifica `pokemonPerPage` en `page.tsx`
-- **Debounce de búsqueda**: Ajusta el timeout en `usePokemon.ts`
+| Tipo | Color | Gradiente |
+|------|-------|-----------|
+| Normal | #A8A878 | gray |
+| Fire | #F08030 | red-orange |
+| Water | #6890F0 | blue-cyan |
+| Electric | #F8D030 | yellow-amber |
+| Grass | #78C850 | green-emerald |
+| Ice | #98D8D8 | cyan-blue |
+| Fighting | #C03028 | red |
+| Poison | #A040A0 | purple |
+| Ground | #E0C068 | yellow-amber |
+| Flying | #A890F0 | indigo-sky |
+| Psychic | #F85888 | pink-rose |
+| Bug | #A8B820 | lime-green |
+| Rock | #B8A038 | yellow-amber |
+| Ghost | #705898 | purple |
+| Dragon | #7038F8 | indigo-blue |
+| Dark | #705848 | gray |
+| Steel | #B8B8D0 | gray-slate |
+| Fairy | #EE99AC | pink-rose |
 
-## 🚀 Despliegue
+## Características de Accesibilidad
+
+- Navegación completa por teclado
+- Soporte para lectores de pantalla
+- Alto contraste en elementos interactivos
+- Animaciones respetuosas con `prefers-reduced-motion`
+
+## Despliegue
 
 ### Vercel (Recomendado)
 ```bash
@@ -150,31 +160,20 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
-## 📱 Responsive Design
+## Responsive Design
 
 La aplicación está optimizada para:
-- 📱 Móviles (320px+)
-- 📱 Tablets (768px+)
-- 💻 Desktop (1024px+)
-- 🖥️ Pantallas grandes (1440px+)
+- Móviles (320px+)
+- Tablets (768px+)
+- Desktop (1024px+)
+- Pantallas grandes (1440px+)
 
-## 🔮 Próximas Características
+## Créditos
 
-- [ ] Filtros por tipo
-- [ ] Favoritos
-- [ ] Comparador de Pokémon
-- [ ] Modo oscuro
-- [ ] PWA support
-- [ ] Tests unitarios
-
-## 📄 Licencia
-
-MIT License - Libre para uso personal y comercial.
-
-## 👨‍💻 Autor
-
-Desarrollado por **Isaac Vargas** como proyecto de aprendizaje con Next.js y TypeScript.
+- [PokeAPI](https://pokeapi.co/) - API de datos de Pokémon
+- [Tailwind CSS](https://tailwindcss.com/) - Framework de estilos
+- [Next.js](https://nextjs.org/) - Framework de React
 
 ---
 
-¡Disfruta explorando el mundo de los Pokémon! 🎮✨
+Hecho con ⚡ y 🎮
