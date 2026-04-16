@@ -1,6 +1,8 @@
 # Pokédex Interactivo
 
 Una aplicación web moderna y elegante para explorar el mundo de los Pokémon, construida con Next.js, React y Tailwind CSS.
+<img width="1902" height="896" alt="image" src="https://github.com/user-attachments/assets/c90a30a4-ae46-47a4-adb8-f6b932e89336" />
+
 
 ## Características
 
